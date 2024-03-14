@@ -1,0 +1,309 @@
+    1  ls
+    2  ls -al
+    3  pwd
+    4  cd Downloads/
+    5  ls
+    6  cd shell-lesson-data/
+    7  ls
+    8  ls
+    9  ls
+   10  ls -F
+   11  ls -F ..
+   12  ls --help
+   13  man ls
+   14  ls -s
+   15  ls -s ..
+   16  ls -s -h ..
+   17  pwd
+   18  ls -F  ..
+   19  man ls
+   20  git-help ls
+   21  git-help
+   22  pacman
+   23  cd
+   24  pwd
+   25  cd Downloads/shell-lesson-data/
+   26  ls
+   27  ls exercise-data/
+   28  cd ~
+   29  cd Downloads/shell-lesson-data/
+   30  cd /
+   31  pwd
+   32  cd ~
+   33  pwd
+   34  cd Downloads/shell-lesson-data/
+   35  ls
+   36  cd exercise-data/
+   37  ls
+   38  ls -al
+   39  ls -alF
+   40  file numbers.txt 
+   41  file alkanes/
+   42  mkdir thesis
+   43  ls -alF
+   44  mkdir ../project/data
+   45  mkdir ../project
+   46  mkdir ../project/data
+   47  cd ../project/data/
+   48  nano draft.txt
+   49  ls
+   50  mv draft.txt quotes.txt
+   51  ls
+   52  mv --help
+   53  mv quotes.txt ../../exercise-data/
+   54  cd ../../exercise-data/
+   55  ls
+   56  ls -al
+   57  cp quotes.txt thesis/
+   58  ls -al thesis/
+   59  cp thesis/ thesis-backup
+   60  cp -r thesis/ thesis-backup
+   61  ls -al
+   62  ls
+   63  rm quotes.txt 
+   64  ls
+   65  ls thesis-backup/
+   66  rm -ri thesis-backup/
+   67  ls
+   68  cd thesis/
+   69  ls
+   70  cd ..
+   71  ls a*
+   72  ls -alF a*
+   73  cd alkanes/
+   74  file cubane.pdb 
+   75  touch -?
+   76  touch --help
+   77  pwd
+   78  cd ..
+   79  ls
+   80  cd creatures/
+   81  file *
+   82  head -n 5 basilisk.dat 
+   83  head -n 50 basilisk.dat 
+   84  head -n 5 basilisk.dat 
+   85  head -n 5 basilisk.dat minotaur.dat unicorn.dat 
+   86  tail -n 5 basilisk.dat minotaur.dat unicorn.dat 
+   87  head -n 5 basilisk.dat minotaur.dat unicorn.dat 
+   88  head -n 3 basilisk.dat minotaur.dat unicorn.dat 
+   89  tail -n 5 basilisk.dat minotaur.dat unicorn.dat 
+   90  head -n 5 basilisk.dat minotaur.dat unicorn.dat 
+   91  cd ../alkanes/
+   92  ls -alF
+   93  nano cubane.pdb 
+   94  wc -l *
+   95  wc --help
+   96  wc -l *
+   97  wc  *
+   98  wc -l * > lengths.txt
+   99  less lengths.txt 
+  100  more lengths.txt 
+  101  less lengths.txt 
+  102  less octane.pdb 
+  103  cat lengths.txt 
+  104  sort lengths.txt 
+  105  sort -n lengths.txt 
+  106  sort --help
+  107  sort -d lengths.txt 
+  108  sort --help
+  109  sort -id lengths.txt 
+  110  sort -d lengths.txt  > sorted-lengths.txt
+  111  less sorted-lengths.txt 
+  112  tail -n 2 sorted-lengths.txt | head -n 1 
+  113  sort -d lengths.txt | tail -n 2 sorted-lengths.txt | head -n 1 
+  114  sort -d lengths.txt | tail -n 2 sorted-lengths.txt
+  115  sort -d lengths.txt | tail -n 5 sorted-lengths.txt | head -n 1 
+  116  sort -d lengths.txt | tail -n 2 sorted-lengths.txt | head -n 1 
+  117  wc -l *pdb | sort -d lengths.txt | tail -n 2 sorted-lengths.txt | head -n 1 
+  118  wc -l *pdb | sort -n | tail -n 2 sorted-lengths.txt | head -n 1 
+  119  wc -l *pdb | sort -n | tail -n 2 | head -n 1 
+  120  wc -l *pdb | sort -n | tail -n 2 | head -n 1 > count
+  121  less count 
+  122  ls
+  123  rm count sorted-lengths.txt 
+  124  wc -l *pdb | sort -n | tail -n 5 | head -n 1 
+  125  wc -l *pdb | sort -n | head -n 1 
+  126  date
+  127  cal
+  128  cd ..
+  129  cd ..
+  130  cd exercise-data/
+  131  ls
+  132  cd animal-counts/
+  133  ls
+  134  cat animals.csv | head -n 5 | tail -n 3 | sort -r
+  135  cut -d , -f 2 animals.csv
+  136  cut -d , -f 2 animals.csv |sort
+  137  cut -d , -f 2 animals.csv | sort
+  138  cut -d , -f 2 animals.csv | sort |unique
+  139  cut -d , -f 2 animals.csv | sort | unique
+  140  cut -d , -f 2 animals.csv | sort | uniq
+  141  uniq --jelp
+  142  uniq --help
+  143  cut -d , -f 2 animals.csv | sort | uniq -c
+  144  cut -d , -f 2 animals.csv | sort | uniq 
+  145  cut -d , -f 2 animals.csv | sort 
+  146  cut -d , -f 2 animals.csv | sort | uniq -c
+  147  cut -d , -f 2 animals.csv | sort | uniq -c | sort -n
+  148  cut -d , -f 2 animals.csv | sort | uniq -c | sort -n | tail -n 1
+  149  cut --help
+  150  cd ..
+  151  cd ..
+  152  ls
+  153  cd north-pacific-gyre/
+  154  ls
+  155  ls -alF
+  156  wc -l
+  157  wc -l NENE*
+  158  wc -l NENE* | sort -n
+  159  last --help
+  160  last
+  161  cd ..
+  162  cd exercise-data/
+  163  cd creatures/
+  164  ls
+  165  head -n 5 *.dat
+  166* head -n 2 *.dat 
+  167  for filename in basilisk.dat minotaur.dat unicorn.dat; do echo $filename; head -n 2 $filename | tail -n 1; done
+  168  for filename in basilisk.dat minotaur.dat unicorn.dat; do echo $filename; head -n 2 $filename | tail -n 1; done
+  169  for filename in basilisk.dat minotaur.dat unicorn.dat; do echo $filename; head -n 2 $filename | tail -n 1; done
+  170  for filename in basilisk.dat minotaur.dat unicorn.dat; do echo $filename; head -n 2 $filename | tail -n 1; done
+  171  ponysay
+  172  cd ../../north-pacific-gyre/
+  173  ls
+  174  file
+  175  file *
+  176  less goodiff.sh 
+  177  bash goostats.sh NENE01729A.txt NENE01729A-stat.txt
+  178  less NENE01729A-stat.txt 
+  179  less NENE01729A-stat.txt 
+  180  ls
+  181  ls
+  182  for file in *A.txt *B.txt; do bash goostats.sh $file stat-$file; done
+  183  ls
+  184  less stat-NENE0*
+  185  echo "for file in *A.txt *B.txt; do bash goostats.sh $file stat-$file; done"
+  186  echo "for file in *A.txt *B.txt; do bash goostats.sh $file stat-$file; done" > do-stats.sh
+  187  nano do-stats.sh 
+  188  nano do-stats.sh 
+  189  bash do-stats.sh 
+  190  nano do-stats.sh 
+  191  rm stat-*
+  192  bash do-stats.sh 
+  193  ls
+  194  nano do-stats.sh 
+  195  echo $PATH
+  196  nano do-stats.sh 
+  197  set -u
+  198  set --help
+  199  cd ..
+  200  ls
+  201  cd exercise-data/writing/
+  202  ls
+  203  less ha
+  204  less haiku.txt 
+  205  grep not haiku.txt 
+  206  grep -n not haiku.txt 
+  207  git
+  208  git config --global core.editor "nano -w"
+  209  git config --global user.name "Adam Weaver"
+  210  git config --global user.email "aweaver2@smcvt.edu"
+  211  git config --global init.defaultBranch main
+  212  git config --edit
+  213  git config --global --edit
+  214  cd ..
+  215  cd ..
+  216  cd ..
+  217  mkdir goo
+  218  cd goo
+  219  pwd
+  220  touch README
+  221  ls
+  222  nano README 
+  223  less README 
+  224  git init
+  225  ls -la
+  226  ls
+  227  export GIT_PS1_SHOWCONFLICTSTATE = yes
+  228* export GIT_PS1_SHOWCONFLICTSTATE=ye
+  229  git add README
+  230  git status
+  231  git status
+  232  git commit
+  233  git log
+  234  git log
+  235  nano README
+  236  git add -A
+  237  git commit
+  238  git add -A
+  239  git commit
+  240  nano README
+  241  git add -A
+  242  git commit
+  243  pwd
+  244  cp ../shell-lesson-data/north-pacific-gyre/do-stats.sh .
+  245  ls
+  246  cp ../shell-lesson-data/north-pacific-gyre/*.sh .
+  247  ls
+  248  mkdir test-data
+  249  cp ../shell-lesson-data/north-pacific-gyre/NENE* test-data/
+  250  ls test-data/
+  251  rm test-data/NENE01729A-stat.txt 
+  252  ls test-data/
+  253  tree
+  254  ltree
+  255  git status
+  256  git add goodiff.sh
+  257  git add goostats.sh
+  258  git status
+  259  git commit
+  260  git status
+  261  git add do-stats.sh
+  262  git add -A
+  263  git commit
+  264  git commit
+  265  history | less
+  266  history > commandhistory20240314.txt
+  267  ls
+  268  less commandhistory20240314.txt 
+  269  git status
+  270  git add -A
+  271  git commit
+  272  git status
+  273  git status
+  274  git log
+  275  git log README
+  276  git diff
+  277  git diff README
+  278  git diff 70c0 README
+  279  git log
+  280  git checkout 70c0
+  281  less README 
+  282  git checkout main
+  283  less README 
+  284  git status
+  285  ls
+  286  git remote add origin https://github.com/adamlweaver/goo20240314.git
+  287  git remote -v
+  288  git branch -M main
+  289  git push -u origin main
+  290  git push -u origin main
+  291  ls ~.ssh
+  292  ls ~/.ssh
+  293  ssh-keygen.exe -t ed25519 -C "aweaver2@smcvt.edu"
+  294  ls ~/.ssh/*
+  295  cat ~/.ssh/id_ed25519.pub 
+  296  cat ~/.ssh/id_ed25519.pub 
+  297  cat ~/.ssh/id_ed25519.pub 
+  298  git push origin main
+  299  git remote -v
+  300  git remote add origin git@github.com:adamlweaver/goo.git
+  301  git remote remove origin
+  302  git remote add origin git@github.com:adamlweaver/goo.git
+  303  git remote -v
+  304  git push origin main
+  305  git remote remove origin
+  306  git remote add origin git@github.com:adamlweaver/goo20240314
+  307  git remote -v
+  308  git push origin main
+  309  history > commandhistory20240314B.txt
